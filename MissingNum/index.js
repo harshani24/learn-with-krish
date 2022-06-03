@@ -1,4 +1,7 @@
 const missingValue = num => {
+
+    console.log(num) ;
+
     const max = Math.max(...num); // maximum number in the sequence
     const min = Math.min(...num); // minimum number in the sequence
     const missingNum = []
@@ -6,7 +9,7 @@ const missingValue = num => {
     for(let i=min; i<= max; i++) {
       if(!num.includes(i)) { 
         missingNum.push(i);
-        console.log("Missing value of ["+ num + "] is: " + i);
+        console.log("Missing value is: " + i);
 
       }
     }
@@ -19,9 +22,8 @@ const missingValue = num => {
       missingNum.push(min-1);
       missingNum.push(max+1);
 
-      console.log("Missing value of ["+ num + "] is: ");
-      console.log("If starting number is missing :"+ missingNum[0]);
-      console.log("If ending number is missing :"+ missingNum[1]);
+      console.log("If starting number is missing, missing value is :"+ missingNum[0]);
+      console.log("If ending number is missing, missing value is :"+ missingNum[1]);
 
 
     }
