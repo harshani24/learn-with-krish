@@ -1,0 +1,32 @@
+In Address class, 
+	1.We don't override the clone method and "Cloneable interface"
+	2.In Student class, when we create the clone from Student, now we don't create a new Address object or clone
+	
+Because of that reason, whenever we get a clone form a Student, we have same reference for the Address object for each and every cloned object.
+
+So, if it changes some value in the address property, it will affect for the all cloned objects and change the value of that property.
+
+
+
+That's why this implementation gives the shallow copy.
+
+
+*******************************************************************************************************************************************************
+----------------Cloned Student Objects ------> "Different References"                     //1579572132 and 359023572
+----------------address propoties of Student Objects ----> "Same References"		  //only 212628335
+*******************************************************************************************************************************************************
+
+
+
+		
+//output
+//		Student [id=1, name=Harshani, age=18, add=Address [no=305, street=Janapadaya, city=Panadura, hashCode()=212628335], hashCode()=1579572132]
+//		Student [id=1, name=Harshani, age=18, add=Address [no=305, street=Janapadaya, city=Panadura, hashCode()=212628335], hashCode()=359023572]
+//
+//		Address [no=305, street=Janapadaya, city=Panadura, hashCode()=212628335]
+//		Address [no=305, street=Janapadaya, city=Panadura, hashCode()=212628335]
+//
+//
+//		-----After changing the value of address 0f S2-----
+//		Address [no=100, street=Batwaththa, city=Maharagama, hashCode()=212628335]
+//		Address [no=100, street=Batwaththa, city=Maharagama, hashCode()=212628335]

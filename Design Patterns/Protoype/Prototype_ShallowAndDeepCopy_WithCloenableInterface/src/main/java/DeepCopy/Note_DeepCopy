@@ -1,0 +1,29 @@
+In here, we use "Cloneable interface" and override the clone() method in both of Address and Student Classes.
+Futher, when we override clone() method in Student class, we get a clone from Address class also.
+
+Because of that, now when we get a clone, we have two different references from Address objects and those are independent from each others.
+
+
+That's why, this implementation represents a deep copy.
+
+
+*******************************************************************************************************************************************************
+----------------Cloned Student Objects ------> "Different References"                     //1579572132 and 305808283
+----------------address propoties of Student Objects ----> "Different References"		  //212628335 and 359023572
+*******************************************************************************************************************************************************
+
+
+
+
+
+//output
+//		Student [id=1, name=Harshani, age=18, add=Address [no=305, street=Janapadaya, city=Panadura, hashCode()=212628335], hashCode()=1579572132]
+//		Student [id=1, name=Harshani, age=18, add=Address [no=305, street=Janapadaya, city=Panadura, hashCode()=359023572], hashCode()=305808283]
+//
+//		Address [no=305, street=Janapadaya, city=Panadura, hashCode()=212628335]
+//		Address [no=305, street=Janapadaya, city=Panadura, hashCode()=359023572]
+//
+//
+//		-----After changing the value of address 0f S2-----
+//		Address [no=305, street=Janapadaya, city=Panadura, hashCode()=212628335]
+//		Address [no=100, street=Batwaththa, city=Maharagama, hashCode()=359023572]
