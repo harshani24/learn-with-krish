@@ -13,7 +13,6 @@ public class SingletonDemo {
 		SingletonObj instance2 = SingletonObj.getInstance();
 		System.out.println(instance2);
 
-
 	}
 }
 	
