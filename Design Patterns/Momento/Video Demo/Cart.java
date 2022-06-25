@@ -1,0 +1,56 @@
+package MementoKirsh;
+
+import java.util.ArrayList;
+
+public class Cart {
+	//1.We need to keep the items in the cart
+	ArrayList<Item> items = new ArrayList<>();
+	
+	//2.need to have a method to add items to the array
+	public void addItem(Item item) {
+		items.add(item);
+	}
+	
+	//3.getter for items 
+	//(Here we need to get a clone, because if we do any changes, then it may affect for the original item list
+	public ArrayList<Item> getItems() {
+		return (ArrayList) items.clone();
+	}
+	
+	//4.Create a CartMemnto class inside the Cart class
+	static class CartMemento{
+		//This class has list of items from Cart and can be acessed only by Cart
+		
+		//1.items array, no need to instanstiate
+		ArrayList<Item> items;
+
+		//2.constructor
+		public CartMemento(ArrayList<Item> items) {
+			this.items = items;
+		}
+		
+		//3.getter
+		public ArrayList<Item> getItems() {
+			return items;
+		}	
+	}
+	
+	//We need to have another 2 methods  to preserve and revert the cart state
+	//5.save() method to preserve the cart state
+	public CartMemento save() {
+		return new CartMemento(getItems());
+	}
+	
+	//6.revert() method to revert the cart state
+	public void revert(CartMemento cartMemento) {
+		items = cartMemento.getItems();
+	}
+
+	@Override
+	public String toString() {
+		return "Cart [items=" + items + "]";
+	}
+	
+	
+	
+}
