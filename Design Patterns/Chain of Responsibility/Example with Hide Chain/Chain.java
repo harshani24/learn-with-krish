@@ -15,7 +15,7 @@ public class Chain {
 	}
 
 	public static void getPriviledges(User user) {
-		System.out.println(visitor.applyPrivilege(user));
+		System.out.println("User priviledges are--->"+visitor.applyPrivilege(user));
 	}
 
 }
