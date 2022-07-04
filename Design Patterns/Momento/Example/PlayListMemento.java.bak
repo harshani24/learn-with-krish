@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //Memento class
 public class PlayListMemento {
-	ArrayList<Song> songList;
+	ArrayList<Song> songList = new ArrayList<>();
 
 	public PlayListMemento(ArrayList<Song> songList) {
 		this.songList = songList;
