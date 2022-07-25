@@ -7,3 +7,13 @@ Write a NodeJS program to find a missing number of given sequence. sequence star
 i.e. : numberSeq= [21,25,29,28,22,24,27,26,30] here missing one is 23. trick is if start number or end number is missing how to figure that. make sure they captured that.
 
 answer : https://github.com/harshani2427/learn-with-krish/tree/master/node
+
+# Question2:
+Write a program to reverse a singular linked list without using a second data structure.
+
+answer : https://github.com/harshani2427/learn-with-krish/tree/master/java/ReverseLinkList
+
+# Question3:
+Find if a given linked list is a palindrome or not.
+
+answer : https://github.com/harshani2427/learn-with-krish/tree/master/java/Palindrome
